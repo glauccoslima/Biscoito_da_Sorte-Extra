@@ -4,26 +4,18 @@ const cookieImage = document.querySelector('#cookie-image'),
       messageScreen = document.querySelector('#message-screen'),
       newCookieButton = document.querySelector('#new-cookie-button');
 
-// Listas de palavras para construir as frases
-const substantivos = ["front-end", "código", "interface", "experiência", "criatividade", "tecnologia", "desenvolvimento", "design", "usuário"];
-const verbos = ["encontra", "constrói", "evolui", "impacta", "transforma", "cria", "melhora", "otimiza", "inspira"];
-const adjetivos = ["incríveis", "emocionantes", "desafiadoras", "dinâmicas", "impactantes", "criativas", "úteis", "belas", "eficientes"];
-
-// Função para gerar um número aleatório
-const getRandomNumber = (max) => Math.floor(Math.random() * max);
-
-// Função que gera uma frase aleatória
-const getPhrase = () => {
-  const sujeito = substantivos[getRandomNumber(substantivos.length)];
-  const verbo = verbos[getRandomNumber(verbos.length)];
-  const objeto = substantivos[getRandomNumber(substantivos.length)];
-  const adjetivo = adjetivos[getRandomNumber(adjetivos.length)];
-  return `O ${sujeito} ${verbo} ${adjetivo} ${objeto}.`;
+// Função que faz uma requisição à API e retorna uma frase motivacional
+const getMotivationalPhrase = async () => {
+  const response = await fetch('https://type.fit/api/quotes'); // Endpoint da API de frases motivacionais
+  const data = await response.json();
+  const randomIndex = Math.floor(Math.random() * data.length);
+  return data[randomIndex].text; // Retorna apenas o texto da frase
 };
 
 // Função que abre o biscoito da sorte
-const openCookie = () => {
-  messageScreen.querySelector("p").innerText = getPhrase();
+const openCookie = async () => {
+  const phrase = await getMotivationalPhrase(); // Obtém a frase da API
+  messageScreen.querySelector("p").innerText = phrase;
   initialScreen.classList.add('hide');
   messageScreen.classList.remove('hide');
 };
