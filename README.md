@@ -25,8 +25,8 @@ O objetivo deste desafio é criar um jogo interativo de Biscoito da Sorte. O jog
 
 ## Tecnologias Utilizadas 💻
 
-| ![HTML5](https://raw.githubusercontent.com/glauccoslima/servidor_estaticos/main/html5-original-wordmark%20(1).png) | ![CSS3](https://raw.githubusercontent.com/glauccoslima/servidor_estaticos/main/css3-original-wordmark.png) | ![JavaScript](https://raw.githubusercontent.com/glauccoslima/servidor_estaticos/main/javascript.png) |
-|:---:|:---:|:---:|
+| ![HTML5](https://raw.githubusercontent.com/glauccoslima/servidor_estaticos/main/html5-original-wordmark%20(1).png) | ![CSS3](https://raw.githubusercontent.com/glauccoslima/servidor_estaticos/main/css3-original-wordmark.png) | ![JavaScript](https://raw.githubusercontent.com/glauccoslima/servidor_estaticos/main/javascript.png) | ![API](https://raw.githubusercontent.com/glauccoslima/servidor_estaticos/main/api-3.png) |
+|:---:|:---:|:---:|:---:|
 
 ## Como Executar o Projeto
 
