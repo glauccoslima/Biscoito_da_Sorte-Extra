@@ -36,7 +36,7 @@
 /* Estilos para o corpo da página */
 body {
   font-family: var(--primary-font);
-  font-size: 1.6rem;
+  font-size: var(--font-size-base);
   background: linear-gradient(45deg, var(--background-start) 0%, var(--background-end) 100%);
   height: 100vh;
   display: grid;
@@ -68,7 +68,7 @@ h1,
 h2 {
   font-family: var(--secondary-font);
   font-weight: bold;
-  font-size: 2.4rem;
+  font-size: var(--font-size-h1);
   line-height: 2.9rem;
   margin-bottom: 1.4rem;
 }
@@ -76,7 +76,7 @@ h2 {
 /* Estilo para parágrafos na tela inicial */
 #initial-screen p {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: var(--font-size-p);
   line-height: 2rem;
   margin-bottom: 2rem;
 }
@@ -98,7 +98,7 @@ h2 {
 #message-screen p {
   font-family: var(--accent-font);
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: var(--font-size-h2);
   line-height: 2.9rem;
   background: var(--message-background);
   box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
@@ -114,7 +114,7 @@ button {
   color: var(--button-text-color);
   font-style: normal;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: var(--font-size-p);
   line-height: 2rem;
   padding: 1.6rem;
   background: var(--button-background);
@@ -176,5 +176,47 @@ button:hover {
 
   100% {
     background-position: 0% 50%;
+  }
+}
+
+/* Estilos para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+
+  /* Define variáveis de tamanho de fonte para diferentes elementos */
+  :root {
+    --font-size-h1: 1.5rem;
+    /* Tamanho de fonte para títulos H1 */
+    --font-size-h2: 1.3rem;
+    /* Tamanho de fonte para títulos H2 */
+    --font-size-p: 0.9rem;
+    /* Tamanho de fonte para parágrafos */
+  }
+
+  /* Ajusta o padding da área de conteúdo principal */
+  main {
+    padding: 5% 7%;
+  }
+}
+
+/* Estilos para telas menores que 480px */
+@media (max-width: 480px) {
+
+  /* Ajusta ainda mais os tamanhos de fonte para legibilidade */
+  :root {
+    --font-size-h1: 1.2rem;
+    --font-size-h2: 1.1rem;
+    --font-size-p: 0.8rem;
+  }
+
+  /* Reduz o espaçamento abaixo dos títulos para economizar espaço vertical */
+  h1,
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Ajusta o tamanho da fonte para parágrafos e botões na área de mensagens */
+  #message-screen p,
+  button {
+    font-size: var(--font-size-p);
   }
 }
