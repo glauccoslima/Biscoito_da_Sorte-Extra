@@ -188,8 +188,6 @@ button:hover {
     /* Tamanho de fonte para títulos H1 */
     --font-size-h2: 1.3rem;
     /* Tamanho de fonte para títulos H2 */
-    --font-size-p: 0.9rem;
-    /* Tamanho de fonte para parágrafos */
   }
 
   /* Ajusta o padding da área de conteúdo principal */
@@ -198,14 +196,13 @@ button:hover {
   }
 }
 
-/* Estilos para telas menores que 480px */
+/* Estilos para telas menores que 480px (Smartphone) */
 @media (max-width: 480px) {
 
   /* Ajusta ainda mais os tamanhos de fonte para legibilidade */
   :root {
     --font-size-h1: 1.2rem;
     --font-size-h2: 1.1rem;
-    --font-size-p: 0.8rem;
   }
 
   /* Reduz o espaçamento abaixo dos títulos para economizar espaço vertical */
